@@ -28,9 +28,7 @@ class orderBook {
 
         void setQuantity(int new_quantity) { quantity = new_quantity; }
 
-        std::vector<Order> orders; // vector to store our orders in the order book
-
-    private:
+        private:
         int id;
         OrderType type;
         Side side;
@@ -39,12 +37,26 @@ class orderBook {
        };
 
 
+    void addOrder(const Order& order) {
+        orders.push_back(order);
+    
+    }
+	// function to remove order by taking in param being order ID and   
+    // checking to see if it matches any of the orders in the vector
+    void removeOrder(int orderId) {
+        auto it = std::find_if(orders.begin(), orders.end(), [orderId](const Order& order) {
+            return order.getId() == orderId;
+            });
+        if (it != orders.end()) {
+            orders.erase(it);
+        }
+    }
+
 private:
 	std::vector<Order> orders; // vector to store our orders in the order book
 
-
+    
 };
-
 
 
     
