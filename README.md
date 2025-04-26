@@ -1,6 +1,6 @@
 # OrderBook Matching Engine (C++)
 
-A compact, performant C++ order-book engine supporting price-time priority matching, efficient order insertion, cancellation, and clear order book visualization. Designed specifically to demonstrate fundamental market microstructure concepts, ideal for MSc Computational Finance applications.
+A compact, performant C++ order-book engine supporting price-time priority matching, efficient order insertion, cancellation, and clear order book visualization. Designed specifically to demonstrate fundamental market microstructure concepts.
 
 ## Features
 
